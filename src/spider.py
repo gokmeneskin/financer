@@ -12,7 +12,7 @@ end = dt.date.today()
 start = end - dt.timedelta(days=60)
 
 for hisse in hisseler:
-    if hisse == 'IST:BOYP':
+    if hisse == 'IST:BOYP' or hisse == 'IST:MEMSA':
         pass
     try:
         df = web.DataReader(hisse, "google", start, end)
